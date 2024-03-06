@@ -32,8 +32,17 @@ m_hormones = { #This ditctionary can be changed manually,
 ```
 
 > [!TIP]
-> I recomend having a csv file where you periodically update any hormones you may use and that way the script will always be up to date
+> I recomend having a csv file where you periodically update any chemicals you may use and that way the script will always be up to date
 
 
 ### Step 2. User input  ###
 A couple of parameters are needed to efficiently calculate the Mass needed for your solution of interest 
+The basic required input is : 
+- Amount of chemicals to include in your solution
+- Unit of Volume [microLiter, MilliLiter, or Liter]
+- Unut of Molarity [microMolar, MilliMolar, or Molar]
+- Desired concentration for the chemical in the solution
+
+### Step 3. Media Recipe ###
+
+After entering the required input, the amount of grams or miligrams (denoted based of quanitity required) will be printed in the terminal
