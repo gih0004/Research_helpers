@@ -36,9 +36,11 @@ def convert_to_molar(molarity, unit):
     else:
         raise ValueError("Invalid unit for molarity")
 
+
 # Function to calculate mass of a chemical
 def calculate_mass(chemical_name, molarity, unit, media_volume_liters, m_chemicals):
-    if chemical_name.strip() == "":
+    """Calculate the mass of a chemical needed in the media."""
+    if not chemical_name:
         raise ValueError("Chemical name cannot be empty.")
     elif chemical_name not in m_chemicals:
         raise ValueError(f"Chemical {chemical_name} not found in the list.")
@@ -47,6 +49,7 @@ def calculate_mass(chemical_name, molarity, unit, media_volume_liters, m_chemica
         Molar_concentration = convert_to_molar(molarity, unit)
         Mass_grams = Molar_concentration * media_volume_liters * Mol_weight  # Mass in grams
         return Mass_grams * 1000000  # Convert grams to micrograms
+
 
 # Function to handle input validation for chemical concentration
 def validate_concentration(concentration):
@@ -71,7 +74,7 @@ def main():
     summary_data = []  # Initialize summary data list
 
     for i in range(1, num_chemicals + 1):
-        chemical_name = st.text_input(f"What chemical will you use? {i}")
+        chemical_name = st.selectbox(f"What chemical will you use? {i}", options=list(m_chemicals.keys()))
         unit = st.selectbox(f"Enter the unit of molarity for final concentration {i}:", ['Micromolar', 'Millimolar', 'Molar'])
         Mol_concentration = st.number_input(f"What concentration {unit} of {chemical_name} do you want in the media? {i}", min_value=0.0)
 
