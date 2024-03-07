@@ -11,7 +11,7 @@ If you're as profficient as me when calculating stock solutions, you might find 
 
 Here I'll give an overview of the code:
 
-### Step 1. Define Chemicals and of interest in a csv file ###
+#### Step 1. Define Chemicals and of interest in a csv file ####
 
 
 |     Chemical     | Molecular Weight |
@@ -25,7 +25,7 @@ Here I'll give an overview of the code:
 > I recomend having a csv file where you periodically update any chemicals you may use and that way the script will always be up to date
 
 
-### Step 2. Run application ###
+#### Step 2. Run application ####
 ```
 pip install streamlit #install streamlit if first time
 ```
@@ -34,7 +34,7 @@ To run the script, open the terminal or terminal emulator and run :
 streamlit run Chem_Calc.py 
 ```
 
-### Step 3. Application Input ###
+#### Step 3. Application Input ####
 
 The application should load momentarily 
 
@@ -46,7 +46,7 @@ The required input is :
 - Unut of Molarity [microMolar, MilliMolar, or Molar]: case insensative but most have correct spelling 
 - Desired final concentration for the chemical in the solution : numeric value corresponding to unit of molarity
 
-### Step 4. Media Recipe ###
+### #Step 4. Media Recipe ####
 
 After entering the required input, the amount of grams, miligrams or micrigrams (denoted based of quanitity required) will be printed in the terminal along with a summary table of the chemicals. 
 
