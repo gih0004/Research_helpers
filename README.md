@@ -6,6 +6,7 @@ This repository is to store different scripts that can be implemented for automa
 If you're as profficient as me when calculating stock solutions, you might find this stock solution calculator of use. 
 
 📋 Required Data: Chemicals of interest and their molecular weight[g/mol] 
+
 📊 Example Data: To get a glimpse of this code, download the Molwght.csv file
 
 Here I'll give an overview of the code:
